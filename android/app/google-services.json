@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "335425830589",
+    "firebase_url": "https://snow-5a4f6.firebaseio.com",
+    "project_id": "snow-5a4f6",
+    "storage_bucket": "snow-5a4f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335425830589:android:a532e5d363468cf8",
+        "android_client_info": {
+          "package_name": "com.example.snow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335425830589-0144cs3celeis1bn2mhf6cdo511l69qk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm46teGBP2vNJ4s7E6sAJbPMMlDCjHCeU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
