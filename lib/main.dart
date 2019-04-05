@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> getCameras() async {
     cameras = await availableCameras();
-    controller = CameraController(cameras[1], ResolutionPreset.medium);
+    controller = CameraController(cameras[1], ResolutionPreset.low);
     await controller.initialize();
     if (!mounted) {
       return;
