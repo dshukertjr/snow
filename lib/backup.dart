@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'dart:io';
+import 'package:flare_flutter/flare_actor.dart';
 
 void main() => runApp(MyApp());
 
@@ -75,34 +76,28 @@ class _MyHomePageState extends State<MyHomePage> {
                   right: box == null ? 0 : (box.left * modifyer),
                   child: _noseBase == null
                       ? Container()
-                      : Container(
-                          width: box.size.width * modifyer,
-                          height: box.size.height * modifyer,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.red,
-                              width: 5,
-                            ),
+                      : SizedBox(
+                          width: box.width * modifyer,
+                          height: box.height * modifyer / 2.5,
+                          child: FlareActor(
+                            "assets/ear.flr",
+                            fit: BoxFit.contain,
+                            animation: "Untitled",
                           ),
                         ),
                 ),
                 Positioned(
-                  // top: box == null ? 0 : (box.top * modifyer),
-                  // right: box == null ? 0 : (box.left * modifyer),
-                  right: _noseBase == null ? 0 : (_noseBase.dx * modifyer - 5),
-                  top: _noseBase == null ? 0 : (_noseBase.dy * modifyer - 5),
+                  right: _noseBase == null ? 0 : (_noseBase.dx * modifyer - box.width * modifyer / 4),
+                  top: _noseBase == null ? 0 : (_noseBase.dy * modifyer - box.height * modifyer / 4),
                   child: _noseBase == null
                       ? Container()
-                      : Container(
-                          // width: box.size.width * modifyer,
-                          // height: box.size.height * modifyer,
-                          width: 10,
-                          height: 10,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.red,
-                              width: 5,
-                            ),
+                      : SizedBox(
+                          width: box.width * modifyer / 2,
+                          height: box.height * modifyer / 2,
+                          child: FlareActor(
+                            "assets/nose.flr",
+                            fit: BoxFit.contain,
+                            animation: "Untitled",
                           ),
                         ),
                 ),
